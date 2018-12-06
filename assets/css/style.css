@@ -1,0 +1,50 @@
+body {
+    margin: 10px;
+    background: url("../images/random_grey_variations.png"); 
+    
+}
+
+h1 {
+    text-align: center;
+    color: whitesmoke;
+    border-radius: 5px;
+    border-style: outset;
+    border-width: 5px;
+    background-color: grey;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    padding: 30px;
+}
+
+.card-header {
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.card {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 60%;
+}
+
+form {
+    margin-top: -20px;
+}
+
+.form-group {
+    margin: 15px;
+}
+
+.btn {
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.col-md-2 {
+    text-align: center;
+    width: 100%;
+}
