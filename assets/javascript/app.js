@@ -2,8 +2,6 @@ const trains = [];
 
 $("#addTrain").on("click", function (event) {
     event.preventDefault()
-    var nextArrivalTime;
-    var minutesAway;
 
     const train = {
         name: $("#nameInput").val().trim(),
@@ -21,15 +19,6 @@ $("#addTrain").on("click", function (event) {
         console.log(nextTime);
     }
 
-    const newTrain = {
-        trainName: name,
-        destination: destination,
-        trainTime: firstTrainTime,
-        frequency: frequency,
-        nextArrival: nextArrivalTime,
-        minutesAway: minutesAway
-    }
-
     train.nextArrivalTime = nextTime.format('HH:mm');
     train.minutesAway = parseInt(moment.duration(nextTime.diff(currentTime)).asMinutes());
 
@@ -37,21 +26,20 @@ $("#addTrain").on("click", function (event) {
     console.log(trains);
 
     localStorage.setItem("trainSchedule", JSON.stringify(trains));
-    createRow(newTrain);
+    createRow(train);
 });
 
 function createRow(trainObj) {
-    
     const tRow = $("<tr>");
-    const trainNa = $("<td>").text(trainObj.trainName);
+    const trainNa = $("<td>").text(trainObj.name);
     tRow.append(trainNa);
     const dest = $("<td>").text(trainObj.destination);
     tRow.append(dest);
-    const freqTime = $("<td>").text(trainObj.frequencyTime);
+    const freqTime = $("<td>").text(trainObj.frequency);
     tRow.append(freqTime);
-    const trainSchedule = $("<td>").text(trainObj.nextArrival);
+    const trainSchedule = $("<td>").text(trainObj.nextArrivalTime);
     tRow.append(trainSchedule);
-    const minutesAway = $("<td>").text(trainObj.minutes);
+    const minutesAway = $("<td>").text(trainObj.minutesAway);
     tRow.append(minutesAway);
 
     
