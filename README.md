@@ -1,7 +1,7 @@
 # TrainScheduler
 
-Fictitious train scheduler
+A train scheduler for imaginary trains.
 
-Deployed Link: https://github.com/MechanicalMouse/TrainScheduler
+Deployed Link: https://mechanicalmouse.github.io/TrainScheduler/
 
 <img src="assets/images/Train.png">
